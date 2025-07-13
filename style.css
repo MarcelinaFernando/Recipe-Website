@@ -17,6 +17,9 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 1.5rem; /* Aproximadamente 24px */
+  line-height: 1.2;
+   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 2rem;
   color: #FFA500;
@@ -73,4 +76,71 @@ h1 {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+}
+
+
+/*  Estilos para Tablet (>=768px)  Mostra 2 cards por linha*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .card li {
+    font-size: 1rem;
+  }
+}
+
+/* ==========================
+   Estilos para Desktop (>=1024px)
+========================== */
+@media (min-width: 1024px) {
+
+  h1 {
+    font-size: 2rem;         /* ~32px */
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+    gap: 2rem;                             /* mais espaço entre os cards */
+    padding: 0 4rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card h2 {
+    font-size: 1.5rem; /* Destaque para o título */
+  }
+
+  .card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .card li {
+    font-size: 1.05rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
 }
