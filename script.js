@@ -1,18 +1,18 @@
-// Seleciona o container onde os cards vão aparecer
+// Selects the container where the cards will appear
 const mealContainer = document.getElementById("meal-container");
 
-// Faz o fetch dos dados da API
+// Fetches data from the API
 fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
   .then(response => response.json())
   .then(data => {
     const meals = data.meals;
 
     meals.forEach(meal => {
-      // Para cada receita, criamos um elemento <article>
+      // For each recipe, create an <article> element
       const card = document.createElement("article");
       card.classList.add("card");
 
-      // Por enquanto, vamos mostrar só o nome da receita
+// For now, we'll just display the recipe name
      card.innerHTML = `
   <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
   <h2>${meal.strMeal}</h2>
@@ -22,9 +22,7 @@ fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
   </ul>
   <a class="btn" href="${meal.strYoutube}" target="_blank">Watch Video</a>
 `;
-
-
-      // Adiciona o card no container
+ // Adds the card to the container
       mealContainer.appendChild(card);
     });
   })
@@ -33,7 +31,7 @@ fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=chicken")
     mealContainer.innerHTML = "<p>Erro ao carregar receitas.</p>";
   });
 
-// Função para pegar até 5 ingredientes da receita
+// Function to get up to 5 ingredients from the recipe
 function getIngredients(meal) {
   const ingredients = [];
 

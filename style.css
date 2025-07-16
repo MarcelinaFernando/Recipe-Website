@@ -17,7 +17,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 1.5rem; /* Aproximadamente 24px */
+  font-size: 1.5rem; 
   line-height: 1.2;
    font-weight: 600;
   margin-top: 1rem;
@@ -27,7 +27,7 @@ h1 {
 
 .cards-container {
   display: grid;
-  grid-template-columns: 1fr; /* Mobile: 1 card per row */
+  grid-template-columns: 1fr; 
   gap: 1.5rem;
 }
 
@@ -78,8 +78,8 @@ h1 {
   border-radius: 5px;
 }
 
+/* Styles for Tablet (>=768px)  Display 2 cards per row */
 
-/*  Estilos para Tablet (>=768px)  Mostra 2 cards por linha*/
 @media (min-width: 768px) {
   h1 {
     font-size: 1.8rem;
@@ -88,7 +88,7 @@ h1 {
   }
 
   .cards-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .card h2 {
@@ -105,20 +105,18 @@ h1 {
   }
 }
 
-/* ==========================
-   Estilos para Desktop (>=1024px)
-========================== */
+/* Styles for Desktop (>=1024px) */
 @media (min-width: 1024px) {
 
   h1 {
-    font-size: 2rem;         /* ~32px */
+    font-size: 2rem;        
     font-weight: 700;
     line-height: 1.2;
   }
 
   .cards-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
-    gap: 2rem;                             /* mais espaço entre os cards */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;                             
     padding: 0 4rem;
   }
 
@@ -127,7 +125,7 @@ h1 {
   }
 
   .card h2 {
-    font-size: 1.5rem; /* Destaque para o título */
+    font-size: 1.5rem; 
   }
 
   .card p {
