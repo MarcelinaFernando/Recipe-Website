@@ -1,0 +1,144 @@
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem; 
+  line-height: 1.2;
+   font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #FFA500;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #FFA500;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #FFA500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Styles for Tablet (>=768px)  Display 2 cards per row */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .card li {
+    font-size: 1rem;
+  }
+}
+
+/* Styles for Desktop (>=1024px) */
+@media (min-width: 1024px) {
+
+  h1 {
+    font-size: 2rem;        
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;                             
+    padding: 0 4rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+
+  .card h2 {
+    font-size: 1.5rem; 
+  }
+
+  .card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .card li {
+    font-size: 1.05rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
